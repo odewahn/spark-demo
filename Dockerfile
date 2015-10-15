@@ -77,6 +77,6 @@ ENV PYSPARK_SUBMIT_ARGS="--packages com.databricks:spark-csv_2.10:1.2.0"
 ENV PYSPARK_PYTHON=/opt/conda/bin/python
 ENV PYSPARK_DRIVER_PYTHON=/opt/conda/bin/python
 ENV IPYTHON 1
-ENV IPYTHON_OPTS "notebook --ip=0.0.0.0"
+ENV IPYTHON_OPTS "notebook --ip=0.0.0.0 --NotebookApp.base_url={base_path}"
 
 CMD /bin/bash -c 'pyspark --packages com.databricks:spark-csv_2.10:1.2.0'
